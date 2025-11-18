@@ -1,73 +1,85 @@
-# React + TypeScript + Vite
+# 🎯 School Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19.2.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1.17-purple)
+![Vite](https://img.shields.io/badge/Vite-7.2.2-yellow)
 
-Currently, two official plugins are available:
+A smart learning task manager with support for themes, multilingualism, and notifications. Organize your learning tasks efficiently!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+### 🎨 Interface
+- **Adaptive design** - works on all devices
+- **Dark/Light theme** - automatic detection of system settings
+- **Smooth animations** - pleasant transitions between states
+- **Localization** - support for Russian and English languages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📚 Task management
+- ✅ **Creating tasks** with priorities and deadlines
+- 📅 **Smart deadlines** - automatic urgency detection
+- 🏷️ **Colored placemarks** for different subjects
+- 🔍 **Search and filtering** by name and status
+- 📊 **Sorting** by creation date, deadline, and priority
+- 📈 **Statistics** for the week
 
-## Expanding the ESLint configuration
+### 🔔 Smart Features
+- 🔔 **Notifications** about upcoming deadlines
+- 💾 **Auto-save** in LocalStorage
+- 🌐 **PWA-ready** - can be installed as an application
+- 📱 **Offline work** - all data is stored locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Quick start
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Preliminary requirements
+- Node.js 18+ 
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation and launch
+```bash
+git clone https://github.com/iso-arkisto/school-task-manager.git
+cd school-task-manager
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛠 Technologies
+- **Frontend:** React 18 + TypeScript
+- **Styles:** Tailwind CSS 4.0
+- **Build:** Vite 5
+- **State management:** Zustand
+- **Localization:** Custom i18n solution
+- **Notifications:** Browser Notification API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📁 Project structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ src/
+├── components/          # React components
+│   ├── Header.tsx      # Header with switches
+│   ├── TaskForm.tsx    # Task creation form
+│   ├── TaskList.tsx    # The list of tasks with filters
+│   └── TaskItem.tsx    # Task element
+├── store/
+│   └── taskStore.ts    # Zustand store
+├── i18n/
+│   ├── translations.ts # Localization
+│   └── LanguageContext.tsx
+├── utils/
+│   └── index.ts        # Auxiliary functions
+├── App.tsx             # The main component
+└── main.tsx            # Entry point
+
+## 🔧 Customization
+
+### Adding a new language
+- Add a translation to src/i18n/translations.ts
+- Update the type Language
+- Add the option to the language selector
+
+### Adding a new subject
+- Add the subject to SUBJECTS in TaskForm.tsx
+- Add color to getSubjectColor in utils.ts
+- Add a translation to SUBJECT_TRANSLATIONS
+
+## 👨‍💻 Author
+GitHub: @iso-arkisto
+
+⭐ Don't forget to put a star if you liked the project!
