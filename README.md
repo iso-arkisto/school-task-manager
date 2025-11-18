@@ -51,21 +51,21 @@ cd school-task-manager
 
 ### 📁 Project structure
 
- src/
-├── components/          # React components
-│   ├── Header.tsx      # Header with switches
-│   ├── TaskForm.tsx    # Task creation form
-│   ├── TaskList.tsx    # The list of tasks with filters
-│   └── TaskItem.tsx    # Task element
-├── store/
-│   └── taskStore.ts    # Zustand store
-├── i18n/
-│   ├── translations.ts # Localization
-│   └── LanguageContext.tsx
-├── utils/
-│   └── index.ts        # Auxiliary functions
-├── App.tsx             # The main component
-└── main.tsx            # Entry point
+ - src/
+- ├── components/          # React components
+- │   ├── Header.tsx      # Header with switches
+- │   ├── TaskForm.tsx    # Task creation form
+- │   ├── TaskList.tsx    # The list of tasks with filters
+- │   └── TaskItem.tsx    # Task element
+- ├── store/
+- │   └── taskStore.ts    # Zustand store
+- ├── i18n/
+- │   ├── translations.ts # Localization
+- │   └── LanguageContext.tsx
+- ├── utils/
+- │   └── index.ts        # Auxiliary functions
+- ├── App.tsx             # The main component
+- └── main.tsx            # Entry point
 
 ## 🔧 Customization
 
