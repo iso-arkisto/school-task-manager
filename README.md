@@ -7,6 +7,8 @@
 
 A smart learning task manager with support for themes, multilingualism, and notifications. Organize your learning tasks efficiently!
 
+![School Task Manager Preview](./src/assets/preview.png)
+
 ## ✨ Features
 
 ### 🎨 Interface
@@ -81,5 +83,8 @@ cd school-task-manager
 
 ## 👨‍💻 Author
 GitHub: @iso-arkisto
+
+## 📋 License
+MIT License - see LICENSE file for details.
 
 ⭐ Don't forget to put a star if you liked the project!
